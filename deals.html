@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang="zh"><head><title>超值推荐</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--gray:#8E8E93;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.back-btn{background:none;border:none;font-size:24px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+</style></head>
+<body>
+<div style="background:linear-gradient(135deg,#FFB6C1,#FFD4E8);padding:0 16px 20px;">
+  <div class="status-bar" style="background:transparent;"><span>9:41</span><span>📶 🔋</span></div>
+  <button class="back-btn" onclick="history.back()">‹</button>
+  <div style="text-align:center;padding:8px 0 16px;">
+    <div style="font-size:28px;font-weight:900;color:#fff;text-shadow:2px 2px 4px rgba(0,0,0,0.2);">超值推荐</div>
+    <div style="background:rgba(255,255,255,0.8);border-radius:12px;padding:8px 16px;display:inline-flex;align-items:center;gap:8px;margin-top:8px;">
+      <span style="font-size:14px;font-weight:600;">⏰ 超值好货 惊喜来袭</span>
+    </div>
+  </div>
+</div>
+<div style="padding:16px 16px 80px;">
+  <div onclick="window.location.href='product-detail.html'" class="card" style="display:flex;gap:12px;cursor:pointer;margin-bottom:10px;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=150" style="width:90px;height:90px;border-radius:10px;object-fit:cover;flex-shrink:0;"/><div style="flex:1;"><div style="font-size:13px;font-weight:600;margin-bottom:6px;line-height:1.4;">宠利欧CHONGLIXIN阿维菌素透皮溶液 抗生素类药0.5%</div><div style="font-size:11px;background:#FFF0F5;color:#FF4081;display:inline-block;padding:2px 8px;border-radius:6px;margin-bottom:6px;">省50元</div><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-size:18px;font-weight:700;color:#FF4444;">¥477.00</span><span style="font-size:12px;color:var(--gray);text-decoration:line-through;">¥527.00</span></div></div><button style="background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 14px;font-size:13px;align-self:center;cursor:pointer;white-space:nowrap;">立即抢购</button></div>
+  <div onclick="window.location.href='product-detail.html'" class="card" style="display:flex;gap:12px;cursor:pointer;margin-bottom:10px;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=150" style="width:90px;height:90px;border-radius:10px;object-fit:cover;flex-shrink:0;"/><div style="flex:1;"><div style="font-size:13px;font-weight:600;margin-bottom:6px;line-height:1.4;">KINPET大宠爱体外驱虫滴剂 驱虫跳蚤虱子</div><div style="font-size:11px;background:#FFF0F5;color:#FF4081;display:inline-block;padding:2px 8px;border-radius:6px;margin-bottom:6px;">省100元</div><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-size:18px;font-weight:700;color:#FF4444;">¥456.03</span><span style="font-size:12px;color:var(--gray);text-decoration:line-through;">¥556.00</span></div></div><button style="background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 14px;font-size:13px;align-self:center;cursor:pointer;white-space:nowrap;">立即抢购</button></div>
+  <div onclick="window.location.href='product-detail.html'" class="card" style="display:flex;gap:12px;cursor:pointer;margin-bottom:10px;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=150" style="width:90px;height:90px;border-radius:10px;object-fit:cover;flex-shrink:0;"/><div style="flex:1;"><div style="font-size:13px;font-weight:600;margin-bottom:6px;line-height:1.4;">郎纯PET 海正海乐妙+喜倍安体内外驱虫1片/4片</div><div style="font-size:11px;background:#FFF0F5;color:#FF4081;display:inline-block;padding:2px 8px;border-radius:6px;margin-bottom:6px;">省100元</div><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-size:18px;font-weight:700;color:#FF4444;">¥99.03</span><span style="font-size:12px;color:var(--gray);text-decoration:line-through;">¥199.03</span></div></div><button style="background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 14px;font-size:13px;align-self:center;cursor:pointer;white-space:nowrap;">立即抢购</button></div>
+  <div onclick="window.location.href='product-detail.html'" class="card" style="display:flex;gap:12px;cursor:pointer;margin-bottom:10px;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=150" style="width:90px;height:90px;border-radius:10px;object-fit:cover;flex-shrink:0;"/><div style="flex:1;"><div style="font-size:13px;font-weight:600;margin-bottom:6px;line-height:1.4;">中龙倍健混合型饲料添加剂辅酶q10 犬狗通用</div><div style="font-size:11px;background:#FFF0F5;color:#FF4081;display:inline-block;padding:2px 8px;border-radius:6px;margin-bottom:6px;">省30元</div><div style="display:flex;align-items:baseline;gap:6px;"><span style="font-size:18px;font-weight:700;color:#FF4444;">¥69.03</span><span style="font-size:12px;color:var(--gray);text-decoration:line-through;">¥99.00</span></div></div><button style="background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 14px;font-size:13px;align-self:center;cursor:pointer;white-space:nowrap;">立即抢购</button></div>
+</div><nav class="tab-bar"><a class="tab-item " href="index.html"><span class="tab-icon">🏠</span><span>首页</span></a><a class="tab-item active" href="shop.html"><span class="tab-icon">🛍️</span><span>商城</span></a><a class="tab-item " href="message.html"><span class="tab-icon">💬</span><span>消息</span></a><a class="tab-item " href="mine.html"><span class="tab-icon">🐱</span><span>我的</span></a></nav><script src="nav.js"></script></body></html>

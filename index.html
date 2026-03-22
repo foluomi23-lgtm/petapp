@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="zh"><head><title>爱宠 - 首页</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;position:relative;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--orange:#FF9500;--red:#FF3B30;--gray:#8E8E93;--gray-light:#F2F2F7;--white:#FFFFFF;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.page{padding-bottom:80px;}
+.back-btn{background:none;border:none;font-size:20px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-orange{background:#FFF3E0;color:#FF9500;}
+.tag-green{background:#E8F5E9;color:#4CAF50;}
+.tag-gray{background:#F2F2F7;color:#8E8E93;}
+.section-title{font-size:16px;font-weight:600;margin-bottom:12px;}
+.divider{height:1px;background:#F2F2F7;margin:12px 0;}
+input{width:100%;padding:10px 16px;border:1px solid #e5e5ea;border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:#F9F9F9;}
+input:focus{border-color:var(--purple);}
+.avatar{border-radius:50%;object-fit:cover;}
+</style></head>
+<body>
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div class="page" style="padding:0 16px 80px;">
+  <!-- Search + 档案 -->
+  <div style="display:flex;gap:10px;align-items:center;margin-bottom:16px;">
+    <div style="flex:1;position:relative;">
+      <input placeholder="搜索想了解的养宠知识" style="padding-left:36px;"/>
+      <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--gray);">🔍</span>
+    </div>
+    <button onclick="window.location.href='pet-profile.html'" style="background:var(--purple-pale);border:1px solid var(--purple-light);border-radius:20px;padding:8px 12px;font-size:13px;color:var(--purple);white-space:nowrap;cursor:pointer;">+ 宠物档案</button>
+  </div>
+
+  <!-- 主功能卡片 -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+    <!-- AI问诊 -->
+    <div onclick="window.location.href='ai-consult.html'" style="background:linear-gradient(135deg,#EDE8F5,#d4c8f0);border-radius:16px;padding:16px;cursor:pointer;position:relative;overflow:hidden;">
+      <div style="font-size:13px;color:var(--gray);margin-bottom:4px;">AI问诊</div>
+      <div style="font-size:12px;color:#666;margin-bottom:12px;">智能在线极速诊断</div>
+      <button style="background:var(--purple);color:#fff;border:none;border-radius:16px;padding:6px 14px;font-size:12px;cursor:pointer;">去问诊</button>
+      <div style="position:absolute;right:-8px;bottom:-8px;font-size:48px;opacity:0.3;">🤖</div>
+    </div>
+    <!-- 右侧两个 -->
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div onclick="window.location.href='expert-consult.html'" style="background:#EDE8F5;border-radius:16px;padding:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:13px;font-weight:600;">专家问诊</div><div style="font-size:11px;color:var(--gray);">专业对症推荐医生</div></div>
+        <span style="font-size:24px;">👨‍⚕️</span>
+      </div>
+      <div onclick="window.location.href='mine.html'" style="background:#EDE8F5;border-radius:16px;padding:12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;">
+        <div><div style="font-size:13px;font-weight:600;">智能管理</div><div style="font-size:11px;color:var(--gray);">疫苗接种宠物医保</div></div>
+        <span style="font-size:24px;">💊</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 快捷入口 -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px;">
+    <div onclick="window.location.href='find-hospital.html'" style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;">
+      <div style="width:52px;height:52px;background:var(--purple-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;">🏥</div>
+      <span style="font-size:12px;color:#333;">找医院</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;">
+      <div style="width:52px;height:52px;background:var(--purple-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;">📚</div>
+      <span style="font-size:12px;color:#333;">疾病百科</span>
+    </div>
+    <div onclick="window.location.href='shop.html'" style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;">
+      <div style="width:52px;height:52px;background:var(--purple-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;">💊</div>
+      <span style="font-size:12px;color:#333;">查药品</span>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;">
+      <div style="width:52px;height:52px;background:var(--purple-pale);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;">❤️</div>
+      <span style="font-size:12px;color:#333;">健康测评</span>
+    </div>
+  </div>
+
+  <!-- 圈圈AI -->
+  <div onclick="window.location.href='ai-generate.html'" style="background:linear-gradient(135deg,#EDE8F5,#e0d4f7);border-radius:16px;padding:16px;margin-bottom:16px;cursor:pointer;display:flex;align-items:center;gap:12px;">
+    <img src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=80" style="width:64px;height:64px;border-radius:12px;object-fit:cover;"/>
+    <div style="flex:1;">
+      <div style="font-size:11px;color:var(--gray);margin-bottom:4px;">圈圈 ai创作一起玩</div>
+      <div style="font-size:14px;font-weight:600;margin-bottom:8px;">制作汪汪喵喵专属表情包</div>
+      <div style="display:flex;gap:6px;margin-bottom:8px;">
+        <span class="tag tag-purple">大家都在玩</span>
+        <span class="tag tag-gray">近期热门</span>
+      </div>
+    </div>
+    <button style="background:var(--purple);color:#fff;border:none;border-radius:16px;padding:8px 14px;font-size:13px;cursor:pointer;">去参与</button>
+  </div>
+
+  <!-- 推荐内容 -->
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+    <div style="display:flex;gap:16px;"><span style="font-size:15px;font-weight:600;color:var(--purple);border-bottom:2px solid var(--purple);padding-bottom:4px;">推荐</span><span style="font-size:15px;color:var(--gray);">附近</span></div>
+    <span style="font-size:13px;color:var(--gray);">查看详情 ›</span>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+    <div onclick="window.location.href='post-detail.html'" style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=300" style="width:100%;height:140px;object-fit:cover;"/>
+      <div style="padding:8px;"><div style="font-size:13px;font-weight:500;">猫咪的冷知识</div><div style="font-size:11px;color:var(--gray);margin-top:4px;">🐱 新手知识</div></div>
+    </div>
+    <div onclick="window.location.href='post-detail.html'" style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300" style="width:100%;height:140px;object-fit:cover;"/>
+      <div style="padding:8px;"><div style="font-size:13px;font-weight:500;">狗狗日常护理小技巧</div><div style="font-size:11px;color:var(--gray);margin-top:4px;">🐶 养护指南</div></div>
+    </div>
+  </div>
+</div>
+<nav class="tab-bar"><a class="tab-item active" data-tab="home" href="index.html"><span class="tab-icon">🏠</span><span>首页</span></a><a class="tab-item" data-tab="shop" href="shop.html"><span class="tab-icon">🛍️</span><span>商城</span></a><a class="tab-item" data-tab="message" href="message.html"><span class="tab-icon">💬</span><span>消息</span></a><a class="tab-item" data-tab="mine" href="mine.html"><span class="tab-icon">🐱</span><span>我的</span></a></nav>
+<script src="nav.js"></script>
+</body></html>

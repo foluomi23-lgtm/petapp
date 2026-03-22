@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="zh"><head><title>作品评论</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--gray:#8E8E93;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.back-btn{background:none;border:none;font-size:24px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-gray{background:#F2F2F7;color:#8E8E93;}
+input{width:100%;padding:10px 16px;border:1px solid #e5e5ea;border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:#F9F9F9;}
+</style></head>
+<body>
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div style="display:flex;align-items:center;padding:0 16px 8px;justify-content:space-between;">
+  <div style="display:flex;align-items:center;gap:10px;">
+    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80" style="width:36px;height:36px;border-radius:50%;object-fit:cover;"/>
+    <span style="font-size:15px;font-weight:600;">小白爱宠</span>
+  </div>
+  <button style="background:var(--purple);color:#fff;border:none;border-radius:16px;padding:6px 16px;font-size:13px;cursor:pointer;">已关注</button>
+</div>
+<img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400" style="width:100%;height:300px;object-fit:cover;"/>
+<div style="padding:0 16px 100px;">
+  <div style="padding:16px 0;">
+    <div style="font-size:16px;font-weight:700;margin-bottom:8px;">猫咪的冷知识</div>
+    <p style="font-size:14px;color:#333;line-height:1.8;">猫咪的冷知识超有趣😀<br/>它们的呼噜声不只是开心 还能自我疗伤缓解疼痛<br/>胡须是天然导航仪<br/>能测量空间宽窄<br/>天生怕水却会游泳 味蕾尝不出甜味</p>
+    <div style="font-size:12px;color:var(--gray);margin-top:8px;">10-22 湖北</div>
+  </div>
+  <div style="border-top:1px solid #f0f0f0;padding-top:16px;">
+    <div style="display:flex;justify-content:space-between;margin-bottom:16px;">
+      <span style="font-size:14px;font-weight:600;">评论区</span>
+      <span style="font-size:13px;color:var(--gray);">共17条评论 ≡</span>
+    </div>
+    <div style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" style="width:32px;height:32px;border-radius:50%;object-fit:cover;"/>
+        <div style="flex:1;"><div style="font-size:13px;font-weight:600;">小白爱宠 <span style='background:var(--purple);color:#fff;font-size:10px;padding:1px 6px;border-radius:4px;margin-left:4px;'>作者</span></div><div style="font-size:12px;color:var(--gray);">10-23</div></div>
+        <span style="font-size:13px;color:var(--gray);">♡ 25</span>
+      </div>
+      <div style="font-size:13px;color:#333;margin-left:40px;">还想知道更多养宠小知识可以关注我哟~</div>
+    </div> <div style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" style="width:32px;height:32px;border-radius:50%;object-fit:cover;"/>
+        <div style="flex:1;"><div style="font-size:13px;font-weight:600;">爱吃猪脚饭 </div><div style="font-size:12px;color:var(--gray);">10-23</div></div>
+        <span style="font-size:13px;color:var(--gray);">♡ 2</span>
+      </div>
+      <div style="font-size:13px;color:#333;margin-left:40px;">猫咪老是躺着睡觉正常吗？</div>
+    </div> <div style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" style="width:32px;height:32px;border-radius:50%;object-fit:cover;"/>
+        <div style="flex:1;"><div style="font-size:13px;font-weight:600;">bblood </div><div style="font-size:12px;color:var(--gray);">10-24</div></div>
+        <span style="font-size:13px;color:var(--gray);">♡ 58</span>
+      </div>
+      <div style="font-size:13px;color:#333;margin-left:40px;">我家的猫的确会游泳哈哈哈</div>
+    </div> <div style="margin-bottom:16px;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" style="width:32px;height:32px;border-radius:50%;object-fit:cover;"/>
+        <div style="flex:1;"><div style="font-size:13px;font-weight:600;">吹冰袖soobin </div><div style="font-size:12px;color:var(--gray);">10-24</div></div>
+        <span style="font-size:13px;color:var(--gray);">♡ 2</span>
+      </div>
+      <div style="font-size:13px;color:#333;margin-left:40px;">我家一洗澡都不让碰！😤</div>
+    </div>
+  </div>
+</div>
+<div style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #eee;padding:10px 16px 28px;display:flex;align-items:center;justify-content:space-between;">
+  <input placeholder="评论点什么..." style="flex:1;margin-right:12px;"/>
+  <div style="display:flex;gap:16px;align-items:center;">
+    <span style="font-size:13px;color:var(--gray);">♡ 230</span>
+    <span style="font-size:13px;color:var(--gray);">⭐ 14</span>
+  </div>
+</div>
+<script src="nav.js"></script>
+</body></html>

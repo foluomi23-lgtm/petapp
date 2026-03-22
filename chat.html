@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="zh"><head><title>对话框</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--gray:#8E8E93;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.back-btn{background:none;border:none;font-size:24px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-gray{background:#F2F2F7;color:#8E8E93;}
+input{width:100%;padding:10px 16px;border:1px solid #e5e5ea;border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:#F9F9F9;}
+</style>
+<style>
+.bubble-left{background:#fff;border-radius:4px 18px 18px 18px;max-width:75%;padding:12px 14px;font-size:14px;line-height:1.6;}
+.bubble-right{background:var(--purple);color:#fff;border-radius:18px 4px 18px 18px;max-width:75%;padding:12px 14px;font-size:14px;line-height:1.6;margin-left:auto;}
+.chat-row{display:flex;gap:8px;margin-bottom:16px;align-items:flex-end;}
+.chat-row.right{flex-direction:row-reverse;}
+</style>
+</head>
+<body style="background:#f5f5f8;">
+<div class="status-bar" style="background:#fff;"><span>9:41</span><span>📶 🔋</span></div>
+<div style="background:#fff;display:flex;align-items:center;padding:8px 16px 12px;border-bottom:1px solid #f0f0f0;">
+  <button class="back-btn" onclick="history.back()">‹</button>
+  <span style="flex:1;text-align:center;font-size:16px;font-weight:600;">好好吃饭</span>
+  <button style="background:none;border:none;font-size:20px;cursor:pointer;">⋯</button>
+</div>
+<div style="padding:16px;padding-bottom:100px;">
+  <!-- Messages -->
+  <div class="chat-row right">
+    <div class="bubble-right">昨天带我家狗狗去做驱虫，她以为医生要给它吃好吃的，全程摇着尾巴凑上去hhhh</div>
+    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;"/>
+  </div>
+  <div style="display:flex;justify-content:center;margin:8px 0 16px;">
+    <div style="width:48px;height:48px;background:var(--purple-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;">🐾</div>
+  </div>
+  <div class="chat-row">
+    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;"/>
+    <div class="bubble-left">我家猫上次也一样</div>
+  </div>
+  <div class="chat-row">
+    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;"/>
+    <div class="bubble-left">结果针一扎进去，瞬间炸毛😂</div>
+  </div>
+  <div style="text-align:center;font-size:12px;color:var(--gray);margin:8px 0;">昨天 11:34</div>
+  <div class="chat-row right">
+    <div class="bubble-right">毛孩子太可爱了</div>
+    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;"/>
+  </div>
+  <div class="chat-row">
+    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=80" style="width:36px;height:36px;border-radius:50%;object-fit:cover;flex-shrink:0;"/>
+    <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=200" style="width:120px;height:120px;border-radius:12px;object-fit:cover;"/>
+  </div>
+  <div style="text-align:center;font-size:12px;color:var(--gray);margin-top:8px;">你撤回了一条消息</div>
+</div>
+<div style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #eee;padding:12px 16px 28px;display:flex;gap:10px;align-items:center;">
+  <input placeholder="输入消息内容..." style="flex:1;"/>
+  <button style="background:none;border:none;font-size:22px;cursor:pointer;">🐱</button>
+  <button style="background:none;border:none;font-size:22px;cursor:pointer;">➕</button>
+</div>
+<script src="nav.js"></script>
+</body></html>

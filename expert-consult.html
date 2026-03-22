@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="zh"><head><title>专家问诊</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;position:relative;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--orange:#FF9500;--red:#FF3B30;--gray:#8E8E93;--gray-light:#F2F2F7;--white:#FFFFFF;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.page{padding-bottom:80px;}
+.back-btn{background:none;border:none;font-size:20px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-orange{background:#FFF3E0;color:#FF9500;}
+.tag-green{background:#E8F5E9;color:#4CAF50;}
+.tag-gray{background:#F2F2F7;color:#8E8E93;}
+.section-title{font-size:16px;font-weight:600;margin-bottom:12px;}
+.divider{height:1px;background:#F2F2F7;margin:12px 0;}
+input{width:100%;padding:10px 16px;border:1px solid #e5e5ea;border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:#F9F9F9;}
+input:focus{border-color:var(--purple);}
+.avatar{border-radius:50%;object-fit:cover;}
+</style></head>
+<body>
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div style="display:flex;align-items:center;padding:0 16px 12px;gap:8px;">
+  <button class="back-btn">‹</button>
+  <h1 style="font-size:17px;font-weight:600;flex:1;text-align:center;">专家问诊</h1>
+  <div style="width:32px;"></div>
+</div>
+<div style="padding:0 16px 80px;">
+  <div style="position:relative;margin-bottom:16px;">
+    <input placeholder="找医院" style="padding-left:36px;"/>
+    <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--gray);">🔍</span>
+    <button style="position:absolute;right:4px;top:50%;transform:translateY(-50%);background:var(--purple);color:#fff;border:none;border-radius:10px;padding:6px 14px;font-size:13px;cursor:pointer;">搜索</button>
+  </div>
+  <!-- 科室 tabs -->
+  <div style="display:flex;gap:8px;overflow-x:auto;margin-bottom:12px;padding-bottom:4px;">
+    <button style="background:var(--purple);color:#fff;border:none;border-radius:20px;padding:6px 16px;font-size:13px;white-space:nowrap;cursor:pointer;">全科</button><button style="background:#F2F2F7;color:#333;border:none;border-radius:20px;padding:6px 16px;font-size:13px;white-space:nowrap;cursor:pointer;">内科</button><button style="background:#F2F2F7;color:#333;border:none;border-radius:20px;padding:6px 16px;font-size:13px;white-space:nowrap;cursor:pointer;">外科</button><button style="background:#F2F2F7;color:#333;border:none;border-radius:20px;padding:6px 16px;font-size:13px;white-space:nowrap;cursor:pointer;">皮肤科</button><button style="background:#F2F2F7;color:#333;border:none;border-radius:20px;padding:6px 16px;font-size:13px;white-space:nowrap;cursor:pointer;">消化科</button><button style="background:#F2F2F7;color:#333;border:none;border-radius:20px;padding:6px 16px;font-size:13px;white-space:nowrap;cursor:pointer;">影像科</button>
+  </div>
+  <!-- Sort -->
+  <div style="display:flex;gap:16px;margin-bottom:16px;font-size:13px;color:var(--gray);">
+    <span style="color:var(--purple);">综合排序 ∨</span>
+    <span>全国 ∨</span>
+    <span>筛选 ∨</span>
+  </div>
+  <!-- Doctor list -->
+  <div class="card" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80" style="width:56px;height:56px;border-radius:50%;object-fit:cover;"/>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+        <span style="font-size:16px;font-weight:600;">何燕芝</span>
+        <span class="tag tag-purple" style="font-size:11px;">资深专家</span>
+      </div>
+      <div style="font-size:13px;color:var(--purple);margin-bottom:4px;">¥20 线上问诊</div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <span class="tag tag-gray">经验丰富</span>
+        <span class="tag tag-gray">回复超快</span>
+      </div>
+      <div style="font-size:12px;color:var(--gray);">已处理 <span style="color:var(--purple);">1567</span>项问诊</div>
+      <div style="font-size:12px;color:#555;margin-top:4px;">擅长：全科、心脏病学、骨外科、肠胃内科</div>
+    </div>
+    <button class="purple-btn-sm" onclick="window.location.href='ai-consult.html'">问诊</button>
+  </div><div class="card" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80" style="width:56px;height:56px;border-radius:50%;object-fit:cover;"/>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+        <span style="font-size:16px;font-weight:600;">何余</span>
+        <span class="tag tag-purple" style="font-size:11px;">名院主任</span>
+      </div>
+      <div style="font-size:13px;color:var(--purple);margin-bottom:4px;">¥20 线上问诊</div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <span class="tag tag-gray">技术精湛</span>
+        <span class="tag tag-gray">认真负责</span>
+      </div>
+      <div style="font-size:12px;color:var(--gray);">已处理 <span style="color:var(--purple);">432</span>项问诊</div>
+      <div style="font-size:12px;color:#555;margin-top:4px;">擅长：心脏病学、骨外科、肠胃内科</div>
+    </div>
+    <button class="purple-btn-sm" onclick="window.location.href='ai-consult.html'">问诊</button>
+  </div><div class="card" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80" style="width:56px;height:56px;border-radius:50%;object-fit:cover;"/>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+        <span style="font-size:16px;font-weight:600;">李娜</span>
+        <span class="tag tag-purple" style="font-size:11px;"></span>
+      </div>
+      <div style="font-size:13px;color:var(--purple);margin-bottom:4px;">¥18.80 线上问诊</div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <span class="tag tag-gray">经验丰富</span>
+        <span class="tag tag-gray">技术专业</span>
+      </div>
+      <div style="font-size:12px;color:var(--gray);">已处理 <span style="color:var(--purple);">322</span>项问诊</div>
+      <div style="font-size:12px;color:#555;margin-top:4px;">擅长：消化内科、泌尿内科</div>
+    </div>
+    <button class="purple-btn-sm" onclick="window.location.href='ai-consult.html'">问诊</button>
+  </div><div class="card" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80" style="width:56px;height:56px;border-radius:50%;object-fit:cover;"/>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+        <span style="font-size:16px;font-weight:600;">周泽南</span>
+        <span class="tag tag-purple" style="font-size:11px;">名院主任</span>
+      </div>
+      <div style="font-size:13px;color:var(--purple);margin-bottom:4px;">¥30 线上问诊</div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <span class="tag tag-gray">经验丰富</span>
+        <span class="tag tag-gray">认真负责</span>
+      </div>
+      <div style="font-size:12px;color:var(--gray);">已处理 <span style="color:var(--purple);">302</span>项问诊</div>
+      <div style="font-size:12px;color:#555;margin-top:4px;">擅长：胃肠内科、骨外科、肠胃内科、呼吸内科、皮肤病</div>
+    </div>
+    <button class="purple-btn-sm" onclick="window.location.href='ai-consult.html'">问诊</button>
+  </div><div class="card" style="display:flex;gap:12px;align-items:flex-start;margin-bottom:10px;">
+    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=80" style="width:56px;height:56px;border-radius:50%;object-fit:cover;"/>
+    <div style="flex:1;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">
+        <span style="font-size:16px;font-weight:600;">吴彦泓</span>
+        <span class="tag tag-purple" style="font-size:11px;">资深专家</span>
+      </div>
+      <div style="font-size:13px;color:var(--purple);margin-bottom:4px;">¥20 线上问诊</div>
+      <div style="display:flex;gap:6px;margin-bottom:6px;">
+        <span class="tag tag-gray">技术精湛</span>
+        <span class="tag tag-gray">耐心细致</span>
+      </div>
+      <div style="font-size:12px;color:var(--gray);">已处理 <span style="color:var(--purple);">289</span>项问诊</div>
+      <div style="font-size:12px;color:#555;margin-top:4px;">擅长：皮肤科、过敏科</div>
+    </div>
+    <button class="purple-btn-sm" onclick="window.location.href='ai-consult.html'">问诊</button>
+  </div>
+</div>
+<nav class="tab-bar"><a class="tab-item active" data-tab="home" href="index.html"><span class="tab-icon">🏠</span><span>首页</span></a><a class="tab-item" data-tab="shop" href="shop.html"><span class="tab-icon">🛍️</span><span>商城</span></a><a class="tab-item" data-tab="message" href="message.html"><span class="tab-icon">💬</span><span>消息</span></a><a class="tab-item" data-tab="mine" href="mine.html"><span class="tab-icon">🐱</span><span>我的</span></a></nav>
+<script src="nav.js"></script>
+</body></html>

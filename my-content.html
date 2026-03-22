@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="zh"><head><title>我的内容</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--gray:#8E8E93;--gray-light:#F2F2F7;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.page{padding-bottom:80px;}
+.back-btn{background:none;border:none;font-size:24px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-orange{background:#FFF3E0;color:#FF9500;}
+.tag-green{background:#E8F5E9;color:#4CAF50;}
+.tag-gray{background:#F2F2F7;color:#8E8E93;}
+input{width:100%;padding:10px 16px;border:1px solid #e5e5ea;border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:#F9F9F9;}
+input:focus{border-color:var(--purple);}
+</style></head>
+<body style="background:linear-gradient(180deg,#EDE8F5 0%,#f5f5f8 25%);">
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div style="display:flex;align-items:center;padding:0 16px 0;">
+  <button class="back-btn" onclick="history.back()">‹</button>
+  <div style="width:32px;"></div>
+  <button style="margin-left:auto;background:none;border:none;font-size:20px;cursor:pointer;">⋯</button>
+</div>
+<div style="padding:0 16px 80px;">
+  <!-- Profile header -->
+  <div style="display:flex;flex-direction:column;align-items:flex-start;padding:12px 0 20px;">
+    <div style="display:flex;align-items:flex-start;gap:12px;width:100%;margin-bottom:12px;">
+      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120" style="width:64px;height:64px;border-radius:50%;object-fit:cover;"/>
+      <div style="flex:1;"><div style="font-size:13px;color:var(--gray);margin-bottom:6px;">✏️ 简单介绍一下自己吧</div><button style="background:#fff;border:1px solid #ddd;border-radius:16px;padding:6px 14px;font-size:13px;cursor:pointer;">编辑资料</button></div>
+    </div>
+    <div style="font-size:18px;font-weight:700;margin-bottom:4px;">姜饼小人</div>
+    <div style="font-size:12px;color:var(--gray);margin-bottom:12px;">ID:1167414309</div>
+    <div style="display:flex;gap:20px;">
+      <div style="text-align:center;"><div style="font-size:17px;font-weight:700;">2</div><div style="font-size:12px;color:var(--gray);">作品</div></div> <div style="text-align:center;"><div style="font-size:17px;font-weight:700;">12</div><div style="font-size:12px;color:var(--gray);">获赞</div></div> <div style="text-align:center;"><div style="font-size:17px;font-weight:700;">0</div><div style="font-size:12px;color:var(--gray);">粉丝</div></div>
+    </div>
+  </div>
+  <!-- Tabs -->
+  <div style="display:flex;gap:24px;border-bottom:1px solid #eee;margin-bottom:16px;align-items:center;">
+    <button style="background:none;border:none;font-size:15px;font-weight:600;color:var(--purple);border-bottom:2px solid var(--purple);padding-bottom:8px;cursor:pointer;">创作</button>
+    <button style="background:none;border:none;font-size:15px;color:var(--gray);padding-bottom:8px;cursor:pointer;">动态</button>
+    <button style="background:none;border:none;font-size:15px;color:var(--gray);padding-bottom:8px;cursor:pointer;">点赞</button>
+    <button style="margin-left:auto;width:36px;height:36px;background:var(--purple);color:#fff;border:none;border-radius:50%;font-size:20px;cursor:pointer;">+</button>
+  </div>
+  <!-- Content grid -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+    <div onclick="window.location.href='post-detail.html'" style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;">
+      <img src="https://images.unsplash.com/photo-1560807707-8cc77767d783?w=300" style="width:100%;height:150px;object-fit:cover;"/>
+      <div style="padding:8px;"><div style="font-size:13px;font-weight:500;">cats and dogs</div><div style="display:flex;align-items:center;gap:4px;margin-top:6px;"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40" style="width:16px;height:16px;border-radius:50%;object-fit:cover;"/><span style="font-size:11px;color:var(--gray);">姜饼小人</span><span style="margin-left:auto;font-size:11px;color:var(--gray);">♡ 3</span></div></div>
+    </div>
+    <div onclick="window.location.href='post-detail.html'" style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;">
+      <div style="width:100%;height:150px;background:linear-gradient(135deg,#E3F2FD,#BBDEFB);display:flex;align-items:center;justify-content:center;"><img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=200" style="width:80px;height:80px;border-radius:50%;object-fit:cover;"/></div>
+      <div style="padding:8px;"><div style="font-size:13px;font-weight:500;">狗狗驱虫用药推荐</div><div style="display:flex;align-items:center;gap:4px;margin-top:6px;"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=40" style="width:16px;height:16px;border-radius:50%;object-fit:cover;"/><span style="font-size:11px;color:var(--gray);">姜饼小人</span><span style="margin-left:auto;font-size:11px;color:var(--gray);">♡ 9</span></div></div>
+    </div>
+  </div>
+</div>
+<nav class="tab-bar"><a class="tab-item " href="index.html"><span class="tab-icon">🏠</span><span>首页</span></a><a class="tab-item " href="shop.html"><span class="tab-icon">🛍️</span><span>商城</span></a><a class="tab-item " href="message.html"><span class="tab-icon">💬</span><span>消息</span></a><a class="tab-item active" href="mine.html"><span class="tab-icon">🐱</span><span>我的</span></a></nav>
+<script src="nav.js"></script>
+</body></html>

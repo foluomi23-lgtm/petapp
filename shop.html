@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh"><head><title>商城</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--gray:#8E8E93;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.back-btn{background:none;border:none;font-size:24px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-orange{background:#FFF3E0;color:#FF9500;}
+.tag-green{background:#E8F5E9;color:#4CAF50;}
+.tag-gray{background:#F2F2F7;color:#8E8E93;}
+input{width:100%;padding:10px 16px;border:1px solid #e5e5ea;border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:#F9F9F9;}
+</style></head>
+<body>
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div style="padding:0 16px 80px;">
+  <div style="position:relative;margin-bottom:16px;display:flex;gap:8px;">
+    <div style="flex:1;position:relative;">
+      <input placeholder="查药品" style="padding-left:36px;"/>
+      <span style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--gray);">🔍</span>
+    </div>
+    <button style="background:var(--purple);color:#fff;border:none;border-radius:12px;padding:0 16px;font-size:14px;cursor:pointer;">搜索</button>
+  </div>
+  <!-- Banner -->
+  <div style="background:linear-gradient(135deg,#EDE8F5,#C8A8E9);border-radius:16px;padding:16px;margin-bottom:16px;display:flex;align-items:center;gap:12px;">
+    <div style="flex:1;"><div style="font-size:16px;font-weight:700;margin-bottom:4px;">开通宠物医保</div><div style="font-size:14px;font-weight:600;margin-bottom:2px;">享受更多服务</div><div style="font-size:12px;color:#666;margin-bottom:10px;">最高报销30万宠物医疗险</div><button style="background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 18px;font-size:13px;cursor:pointer;">免费体验</button></div>
+    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=150" style="width:80px;height:80px;border-radius:12px;object-fit:cover;"/>
+  </div>
+  <!-- 超值推荐 -->
+  <div style="margin-bottom:16px;">
+    <div style="font-size:16px;font-weight:600;margin-bottom:12px;">超值推荐</div>
+    <div style="display:flex;gap:10px;overflow-x:auto;padding-bottom:4px;">
+      <div onclick="window.location.href='product-detail.html'" style="min-width:130px;background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=200" style="width:100%;height:100px;object-fit:cover;"/><div style="padding:8px;"><div style="font-size:12px;color:#333;margin-bottom:4px;">大宠爱体外驱虫滴剂</div><div style="font-size:14px;font-weight:700;color:var(--purple);">¥456.00</div><div style="font-size:10px;background:#FF4444;color:#fff;display:inline-block;padding:1px 6px;border-radius:4px;">限时抢</div></div></div> <div onclick="window.location.href='product-detail.html'" style="min-width:130px;background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=200" style="width:100%;height:100px;object-fit:cover;"/><div style="padding:8px;"><div style="font-size:12px;color:#333;margin-bottom:4px;">阿维菌素透皮溶液</div><div style="font-size:14px;font-weight:700;color:var(--purple);">¥477.00</div><div style="font-size:10px;background:#FF4444;color:#fff;display:inline-block;padding:1px 6px;border-radius:4px;">限时抢</div></div></div> <div onclick="window.location.href='product-detail.html'" style="min-width:130px;background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=200" style="width:100%;height:100px;object-fit:cover;"/><div style="padding:8px;"><div style="font-size:12px;color:#333;margin-bottom:4px;">中龙倍健混合型饲料</div><div style="font-size:14px;font-weight:700;color:var(--purple);">¥107.32</div><div style="font-size:10px;background:#FF4444;color:#fff;display:inline-block;padding:1px 6px;border-radius:4px;">限时抢</div></div></div>
+    </div>
+  </div>
+  <!-- Category tabs -->
+  <div style="display:flex;gap:10px;margin-bottom:16px;overflow-x:auto;">
+    <button style="background:var(--purple);color:#fff;border:none;border-radius:20px;padding:6px 14px;font-size:13px;white-space:nowrap;cursor:pointer;">推荐</button> <button style="background:#fff;color:#333;border:none;border-radius:20px;padding:6px 14px;font-size:13px;white-space:nowrap;cursor:pointer;">驱虫</button> <button style="background:#fff;color:#333;border:none;border-radius:20px;padding:6px 14px;font-size:13px;white-space:nowrap;cursor:pointer;">消化</button> <button style="background:#fff;color:#333;border:none;border-radius:20px;padding:6px 14px;font-size:13px;white-space:nowrap;cursor:pointer;">肾脏</button> <button style="background:#fff;color:#333;border:none;border-radius:20px;padding:6px 14px;font-size:13px;white-space:nowrap;cursor:pointer;">皮肤</button>
+  </div>
+  <!-- Products -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+    <div onclick="window.location.href='product-detail.html'" style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=300" style="width:100%;height:130px;object-fit:cover;"/><div style="padding:10px;"><div style="font-size:13px;color:#333;margin-bottom:6px;">海正海乐妙+喜倍安体内外驱虫</div><div style="display:flex;gap:4px;margin-bottom:6px;"><span class="tag tag-green">正品保证</span></div><div style="font-size:14px;font-weight:700;color:var(--purple);">医保价 ¥167.22</div><div style="font-size:11px;color:var(--gray);">已售 2w+</div></div></div> <div onclick="window.location.href='product-detail.html'" style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=300" style="width:100%;height:130px;object-fit:cover;"/><div style="padding:10px;"><div style="font-size:13px;color:#333;margin-bottom:6px;">SIROEN改善泪痕猫狗通用</div><div style="display:flex;gap:4px;margin-bottom:6px;"><span class="tag tag-green">正品保证</span></div><div style="font-size:14px;font-weight:700;color:var(--purple);">医保价 ¥89.00</div><div style="font-size:11px;color:var(--gray);">已售 1.2w+</div></div></div> <div onclick="window.location.href='product-detail.html'" style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=300" style="width:100%;height:130px;object-fit:cover;"/><div style="padding:10px;"><div style="font-size:13px;color:#333;margin-bottom:6px;">宠利欧阿维菌素透皮溶液</div><div style="display:flex;gap:4px;margin-bottom:6px;"><span class="tag tag-green">正品保证</span></div><div style="font-size:14px;font-weight:700;color:var(--purple);">医保价 ¥477.00</div><div style="font-size:11px;color:var(--gray);">已售 8k+</div></div></div> <div onclick="window.location.href='product-detail.html'" style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=300" style="width:100%;height:130px;object-fit:cover;"/><div style="padding:10px;"><div style="font-size:13px;color:#333;margin-bottom:6px;">中龙倍健混合型饲料</div><div style="display:flex;gap:4px;margin-bottom:6px;"><span class="tag tag-green">正品保证</span></div><div style="font-size:14px;font-weight:700;color:var(--purple);">医保价 ¥107.32</div><div style="font-size:11px;color:var(--gray);">已售 5k+</div></div></div>
+  </div>
+</div>
+<nav class="tab-bar"><a class="tab-item " href="index.html"><span class="tab-icon">🏠</span><span>首页</span></a><a class="tab-item active" href="shop.html"><span class="tab-icon">🛍️</span><span>商城</span></a><a class="tab-item " href="message.html"><span class="tab-icon">💬</span><span>消息</span></a><a class="tab-item " href="mine.html"><span class="tab-icon">🐱</span><span>我的</span></a></nav>
+<script src="nav.js"></script>
+</body></html>

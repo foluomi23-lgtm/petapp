@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="zh"><head><title>商品详情</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--gray:#8E8E93;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.back-btn{background:none;border:none;font-size:24px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-orange{background:#FFF3E0;color:#FF9500;}
+.tag-green{background:#E8F5E9;color:#4CAF50;}
+.tag-gray{background:#F2F2F7;color:#8E8E93;}
+input{width:100%;padding:10px 16px;border:1px solid #e5e5ea;border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:#F9F9F9;}
+</style></head>
+<body>
+<div style="position:relative;">
+  <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=400" style="width:100%;height:280px;object-fit:cover;"/>
+  <div style="position:absolute;top:50px;left:12px;right:12px;display:flex;justify-content:space-between;">
+    <button class="back-btn" onclick="history.back()" style="background:rgba(255,255,255,0.8);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;font-size:18px;">‹</button>
+    <div style="display:flex;gap:8px;"><button style="background:rgba(255,255,255,0.8);border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;">↑</button><button style="background:rgba(255,255,255,0.8);border:none;border-radius:50%;width:36px;height:36px;cursor:pointer;">⋯</button></div>
+  </div>
+</div>
+<div style="padding:0 16px 100px;">
+  <!-- Price -->
+  <div style="background:linear-gradient(90deg,var(--purple),var(--purple-light));border-radius:12px;padding:12px 16px;margin:12px 0;display:flex;align-items:center;justify-content:space-between;">
+    <div><div style="color:rgba(255,255,255,0.8);font-size:11px;margin-bottom:2px;">品牌质保</div><div style="color:#fff;"><span style="font-size:24px;font-weight:700;">¥167.22</span><span style="text-decoration:line-through;font-size:13px;opacity:0.7;margin-left:8px;">¥199.00</span></div></div>
+    <div style="text-align:right;"><div style="color:rgba(255,255,255,0.8);font-size:11px;">新人优惠补贴</div><div style="color:#fff;font-size:13px;">1天 05:22:03</div></div>
+  </div>
+  <!-- Title -->
+  <div class="card">
+    <div style="font-size:11px;color:var(--purple);background:var(--purple-pale);display:inline-block;padding:2px 8px;border-radius:6px;margin-bottom:8px;">平台保障 一站尽享品质好物</div>
+    <div style="font-size:15px;font-weight:600;line-height:1.5;margin-bottom:8px;">海正海乐妙+喜倍安体内外驱虫1片/4片 成猫幼猫均</div>
+    <div style="font-size:13px;color:var(--gray);">已售256 | 109人加购</div>
+  </div>
+  <!-- Selection -->
+  <div class="card">
+    <div style="font-size:13px;color:var(--gray);margin-bottom:8px;">选择 规格</div>
+    <div style="display:flex;gap:8px;">
+      <div style="border:2px solid var(--purple);border-radius:8px;padding:6px;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=60" style="width:44px;height:44px;object-fit:cover;border-radius:6px;"/></div> <div style="border:1px solid #ddd;border-radius:8px;padding:6px;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=60" style="width:44px;height:44px;object-fit:cover;border-radius:6px;"/></div> <div style="border:1px solid #ddd;border-radius:8px;padding:6px;cursor:pointer;"><img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=60" style="width:44px;height:44px;object-fit:cover;border-radius:6px;"/></div>
+      <span style="font-size:12px;color:var(--gray);align-self:center;">共3种规格可选</span>
+    </div>
+  </div>
+  <!-- Reviews -->
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;margin-bottom:12px;"><span style="font-size:14px;font-weight:600;">评价 1万+</span><span style="font-size:13px;color:var(--green);">好评率99% ›</span></div>
+    <div style="display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap;">
+      <span class="tag tag-gray">大品牌(227)</span> <span class="tag tag-gray">正品(227)</span> <span class="tag tag-gray">发货超快(227)</span>
+    </div>
+    <div style="margin-bottom:16px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;"><div style="width:32px;height:32px;background:#ddd;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;">👤</div><span style="font-size:13px;color:var(--gray);">m****l</span></div><p style="font-size:13px;color:#333;line-height:1.6;">很快，买完两天就到了。一直给猫用的大宠爱，在市面上来说也很安全。</p></div> <div style="margin-bottom:16px;"><div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;"><div style="width:32px;height:32px;background:#ddd;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;">👤</div><span style="font-size:13px;color:var(--gray);">匿名用户</span></div><p style="font-size:13px;color:#333;line-height:1.6;">国家兽药综合查询app扫过了，是正品，很快，买完两天就到了。</p></div>
+  </div>
+</div>
+<!-- Bottom bar -->
+<div style="position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #eee;padding:12px 16px 28px;display:flex;gap:10px;">
+  <button style="flex:1;background:#fff;border:1px solid var(--purple);color:var(--purple);border-radius:24px;padding:12px;font-size:15px;cursor:pointer;">加入购物车</button>
+  <button style="flex:1;background:linear-gradient(135deg,var(--purple),var(--purple-light));color:#fff;border:none;border-radius:24px;padding:12px;font-size:15px;font-weight:500;cursor:pointer;">领券购买</button>
+</div>
+<script src="nav.js"></script>
+</body></html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh"><head><title>我的</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--gray:#8E8E93;--gray-light:#F2F2F7;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.page{padding-bottom:80px;}
+.back-btn{background:none;border:none;font-size:24px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+.tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500;}
+.tag-purple{background:var(--purple-bg);color:var(--purple);}
+.tag-orange{background:#FFF3E0;color:#FF9500;}
+.tag-green{background:#E8F5E9;color:#4CAF50;}
+.tag-gray{background:#F2F2F7;color:#8E8E93;}
+input{width:100%;padding:10px 16px;border:1px solid #e5e5ea;border-radius:12px;font-size:14px;font-family:inherit;outline:none;background:#F9F9F9;}
+input:focus{border-color:var(--purple);}
+</style></head>
+<body style="background:linear-gradient(180deg,#EDE8F5 0%,#f5f5f8 30%);">
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div style="padding:0 16px 80px;">
+  <!-- User header -->
+  <div style="display:flex;align-items:center;gap:12px;padding:12px 0 20px;">
+    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=120" style="width:64px;height:64px;border-radius:50%;object-fit:cover;"/>
+    <div style="flex:1;"><div style="font-size:18px;font-weight:700;">姜饼小人</div><div style="font-size:12px;color:var(--gray);margin-top:2px;">ID:1167414309</div></div>
+    <button onclick="window.location.href='my-content.html'" style="background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 14px;font-size:13px;cursor:pointer;">我的内容</button>
+  </div>
+  <!-- Stats -->
+  <div style="display:flex;justify-content:space-around;background:#fff;border-radius:16px;padding:16px;margin-bottom:16px;">
+    <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><span style="font-size:18px;font-weight:700;color:var(--purple);">6</span><span style="font-size:12px;color:var(--gray);">收藏</span></div> <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><span style="font-size:18px;font-weight:700;color:var(--purple);">3</span><span style="font-size:12px;color:var(--gray);">关注</span></div> <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><span style="font-size:18px;font-weight:700;color:var(--purple);">0</span><span style="font-size:12px;color:var(--gray);">优惠券</span></div> <div style="display:flex;flex-direction:column;align-items:center;gap:4px;"><span style="font-size:18px;font-weight:700;color:var(--purple);">39</span><span style="font-size:12px;color:var(--gray);">浏览</span></div>
+  </div>
+  <!-- Pet profile card -->
+  <div class="card" style="margin-bottom:16px;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+      <span style="background:var(--purple);color:#fff;padding:4px 14px;border-radius:20px;font-size:13px;font-weight:600;">宠物档案</span>
+      <div style="display:flex;gap:8px;align-items:center;">
+        <button onclick="window.location.href='pet-profile.html'" style="background:none;border:none;color:var(--purple);font-size:13px;cursor:pointer;">⊕ 添加宠物</button>
+        <button style="background:none;border:none;font-size:20px;cursor:pointer;">↻</button>
+      </div>
+    </div>
+    <div onclick="window.location.href='pet-profile.html'" style="display:flex;align-items:center;gap:12px;cursor:pointer;background:var(--purple-pale);border-radius:12px;padding:12px;">
+      <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=80" style="width:48px;height:48px;border-radius:50%;object-fit:cover;"/>
+      <div style="flex:1;"><div style="font-size:15px;font-weight:600;">毛毛</div><div style="font-size:12px;color:var(--gray);">1岁3个月 | 妹妹 | 泰迪</div></div>
+      <span style="color:var(--purple);">›</span>
+    </div>
+  </div>
+  <!-- Quick links -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;">
+    <div onclick="window.location.href='schedule.html'" class="card" style="cursor:pointer;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:28px;">📅</span>
+      <div><div style="font-size:14px;font-weight:600;">我的行程</div><div style="font-size:11px;color:var(--gray);">记录点滴时刻</div></div>
+    </div>
+    <div onclick="window.location.href='activity.html'" class="card" style="cursor:pointer;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:28px;">🎁</span>
+      <div><div style="font-size:14px;font-weight:600;">活动中心</div><div style="font-size:11px;color:var(--gray);">完成任务获奖励</div></div>
+    </div>
+  </div>
+  <!-- Orders -->
+  <div class="card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+      <span style="font-size:15px;font-weight:600;">我的订单</span>
+      <span style="font-size:13px;color:var(--gray);">全部 ›</span>
+    </div>
+    <div style="display:flex;justify-content:space-around;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;"><span style="font-size:28px;">📋</span><span style="font-size:12px;color:#555;">待预约</span></div> <div style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;"><span style="font-size:28px;">📦</span><span style="font-size:12px;color:#555;">待发货</span></div> <div style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;"><span style="font-size:28px;">🚚</span><span style="font-size:12px;color:#555;">待收货</span></div> <div style="display:flex;flex-direction:column;align-items:center;gap:6px;cursor:pointer;"><span style="font-size:28px;">⭐</span><span style="font-size:12px;color:#555;">待评价</span></div>
+    </div>
+  </div>
+</div>
+<nav class="tab-bar"><a class="tab-item " href="index.html"><span class="tab-icon">🏠</span><span>首页</span></a><a class="tab-item " href="shop.html"><span class="tab-icon">🛍️</span><span>商城</span></a><a class="tab-item " href="message.html"><span class="tab-icon">💬</span><span>消息</span></a><a class="tab-item active" href="mine.html"><span class="tab-icon">🐱</span><span>我的</span></a></nav>
+<script src="nav.js"></script>
+</body></html>

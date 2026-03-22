@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="zh"><head><title>圈圈AI生成</title><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:"Noto Sans SC",sans-serif;background:#f5f5f8;color:#1a1a2e;max-width:390px;margin:0 auto;min-height:100vh;}
+:root{--purple:#7B5EA7;--purple-light:#9B7ED4;--purple-bg:#EDE8F5;--purple-pale:#F3EFFE;--green:#7CC67E;--gray:#8E8E93;}
+.status-bar{height:44px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;font-size:15px;font-weight:600;}
+.back-btn{background:none;border:none;font-size:24px;color:#1a1a2e;cursor:pointer;padding:8px;}
+.tab-bar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:390px;background:#fff;border-top:1px solid #e5e5ea;display:flex;justify-content:space-around;padding:8px 0 20px;z-index:100;}
+.tab-item{display:flex;flex-direction:column;align-items:center;gap:3px;text-decoration:none;color:#8E8E93;font-size:10px;background:none;border:none;cursor:pointer;}
+.tab-item.active{color:var(--purple);}
+.tab-icon{font-size:22px;}
+.card{background:#fff;border-radius:16px;padding:16px;margin-bottom:12px;}
+.purple-btn{background:var(--purple);color:#fff;border:none;border-radius:24px;padding:12px 24px;font-size:15px;font-weight:500;cursor:pointer;width:100%;}
+.purple-btn-sm{background:var(--purple);color:#fff;border:none;border-radius:20px;padding:8px 16px;font-size:13px;font-weight:500;cursor:pointer;}
+</style></head>
+<body style="background:linear-gradient(180deg,#EDE8F5 0%,#f5f5f8 35%);">
+<div class="status-bar"><span>9:41</span><span>📶 🔋</span></div>
+<div style="padding:0 16px 80px;">
+  <button class="back-btn" onclick="history.back()">‹</button>
+  <div style="display:flex;flex-direction:column;align-items:center;padding:8px 0 20px;">
+    <img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=200" style="width:100px;height:100px;border-radius:20px;object-fit:cover;margin-bottom:16px;"/>
+    <h1 style="font-size:22px;font-weight:700;margin-bottom:6px;">圈圈生图新功能</h1>
+    <p style="font-size:14px;color:var(--gray);text-align:center;">上传图片，解锁更多ai风格绘画！</p>
+  </div>
+  <div style="display:flex;gap:10px;margin-bottom:24px;">
+    <button style="flex:1;background:#fff;border:2px solid var(--purple);border-radius:24px;padding:12px;font-size:14px;font-weight:600;color:var(--purple);cursor:pointer;">🖼️ 开始创作</button>
+    <button style="flex:1;background:#f5f5f8;border:none;border-radius:24px;padding:12px;font-size:14px;color:var(--gray);cursor:pointer;">📋 创作记录</button>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+    <div style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1574158622682-e40e69881006?w=300" style="width:100%;height:160px;object-fit:cover;"/><div style="padding:8px;display:flex;align-items:center;justify-content:space-between;"><span style="font-size:12px;">haeriiin</span><button style="background:var(--purple-pale);color:var(--purple);border:none;border-radius:12px;padding:4px 10px;font-size:11px;cursor:pointer;">做同款</button></div></div>
+    <div style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=300" style="width:100%;height:160px;object-fit:cover;"/><div style="padding:8px;display:flex;align-items:center;justify-content:space-between;"><span style="font-size:12px;">dolami</span><button style="background:var(--purple-pale);color:var(--purple);border:none;border-radius:12px;padding:4px 10px;font-size:11px;cursor:pointer;">做同款</button></div></div>
+    <div style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1548681528-6a5c45b66b42?w=300" style="width:100%;height:160px;object-fit:cover;"/><div style="padding:8px;display:flex;align-items:center;justify-content:space-between;"><span style="font-size:12px;">小白</span><button style="background:var(--purple-pale);color:var(--purple);border:none;border-radius:12px;padding:4px 10px;font-size:11px;cursor:pointer;">做同款</button></div></div>
+    <div style="background:#fff;border-radius:12px;overflow:hidden;cursor:pointer;"><img src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=300" style="width:100%;height:160px;object-fit:cover;"/><div style="padding:8px;display:flex;align-items:center;justify-content:space-between;"><span style="font-size:12px;">小白爱宠</span><button style="background:var(--purple-pale);color:var(--purple);border:none;border-radius:12px;padding:4px 10px;font-size:11px;cursor:pointer;">做同款</button></div></div>
+  </div>
+</div>
+<nav class="tab-bar"><a class="tab-item active" href="index.html"><span class="tab-icon">🏠</span><span>首页</span></a><a class="tab-item " href="shop.html"><span class="tab-icon">🛍️</span><span>商城</span></a><a class="tab-item " href="message.html"><span class="tab-icon">💬</span><span>消息</span></a><a class="tab-item " href="mine.html"><span class="tab-icon">🐱</span><span>我的</span></a></nav>
+<script src="nav.js"></script>
+</body></html>
